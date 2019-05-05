@@ -96,7 +96,7 @@
             <xs:attribute name="class" type="xs:string" use="required">
                 <xs:annotation>
                     <xs:documentation>
-                        Must implement the ToolFactory interface.
+                        Must implement the com.vrsct.context.ToolFactory interface.
                     </xs:documentation>
                 </xs:annotation>
             </xs:attribute>
@@ -402,7 +402,7 @@
                                 <xs:documentation>
                                     Must extend javax.websocket.Endpoint. For Vrsct-specific features including setting
                                     up an ExecutionContext
-                                    extend VrsctAbstractEndpoint. Even if not using
+                                    extend com.vrsct.impl.webapp.VrsctAbstractEndpoint. Even if not using
                                     VrsctAbstractEndpoint it will try
                                     to add the following ServerEndpointConfig user properties: handshakeRequest,
                                     httpSession,
@@ -686,7 +686,7 @@
             <xs:attribute name="class" type="xs:string" use="optional">
                 <xs:annotation>
                     <xs:documentation>If specified should point to a class that implements the
-                        ScriptRunner interface.
+                        com.vrsct.context.ScriptRunner interface.
                     </xs:documentation>
                 </xs:annotation>
             </xs:attribute>
@@ -799,7 +799,7 @@
             <xs:attribute name="runner-class" type="xs:string" use="required">
                 <xs:annotation>
                     <xs:documentation>
-                        Fully qualified name of class that implements the ServiceRunner
+                        Fully qualified name of class that implements the com.vrsct.impl.service.ServiceRunner
                         interface.
                     </xs:documentation>
                 </xs:annotation>
@@ -885,10 +885,10 @@
             <xs:attribute name="runtime-add-missing" default="true" type="boolean"/>
             <xs:attribute name="runtime-add-fks" default="true" type="boolean"/>
             <xs:attribute name="object-factory" type="xs:string"
-                          default="EntityDatasourceFactoryImpl">
+                          default="com.vrsct.impl.entity.EntityDatasourceFactoryImpl">
                 <xs:annotation>
                     <xs:documentation>The references class must implement the
-                        EntityDatasourceFactory interface.
+                        com.vrsct.entity.EntityDatasourceFactory interface.
                     </xs:documentation>
                 </xs:annotation>
             </xs:attribute>
