@@ -18,6 +18,14 @@ along with this software (see the LICENSE.md file). If not, see
 
     <xs:element name="AllWidgets" abstract="true"/>
     <xs:element name="StandaloneFields" abstract="true"/>
+    <xs:group name="widget-elements">
+        <xs:choice>
+            <xs:element ref="AllWidgets"/>
+            <xs:element ref="StandaloneFields"/>
+            <!-- allow additional elements without validation to facilitate extension by adding only FTL macros -->
+            <xs:any minOccurs="0" maxOccurs="unbounded" processContents="skip"/>
+        </xs:choice>
+    </xs:group>
 
     <xs:simpleType name="auto-field-type">
         <xs:restriction base="xs:token">
@@ -67,6 +75,24 @@ along with this software (see the LICENSE.md file). If not, see
     </xs:element>
 
     <!-- ================== form ==================== -->
+    <xs:element name="form-container-dialog" substitutionGroup="AllWidgets">
+        <xs:annotation>
+            <xs:documentation>The contents start out hidden with only a button with the button-text on it.
+                When the button is clicked on a dialog opens to show the contents.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:group ref="widget-elements" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:attribute name="id" type="xs:string" use="required"/>
+            <xs:attribute name="button-text" type="xs:string" use="required"/>
+            <xs:attribute name="width" type="xs:string" default="760"/>
+            <xs:attribute name="height" type="xs:string" default="600"/>
+            <xs:attribute name="condition" type="xs:string"/>
+            <xs:attribute name="type" type="color-context" default="primary"/>
+            <xs:attribute name="icon" type="xs:string"/>
+        </xs:complexType>
+    </xs:element>
+
     <xs:element name="form-single" substitutionGroup="AllWidgets">
         <xs:annotation>
             <xs:documentation>A single form is used to view or edit fields of a single map/hash/record/etc.
@@ -206,6 +232,8 @@ along with this software (see the LICENSE.md file). If not, see
         <xs:complexType>
             <xs:sequence>
                 <xs:element minOccurs="0" ref="entity-find"/>
+                <xs:element minOccurs="0" ref="form-single"/>
+                <xs:element minOccurs="0" ref="form-container-dialog"/>
                 <xs:element minOccurs="0" ref="row-actions"/>
                 <xs:element minOccurs="0" name="hidden-parameters">
                     <xs:complexType>
