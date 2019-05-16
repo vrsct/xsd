@@ -26,14 +26,6 @@ along with this software (see the LICENSE.md file). If not, see
             <xs:element ref="fail-widgets" minOccurs="0"/>
         </xs:sequence>
     </xs:group>
-    <xs:group name="widget-elements">
-        <xs:choice>
-            <xs:element ref="AllWidgets"/>
-            <xs:element ref="StandaloneFields"/>
-            <!-- allow additional elements without validation to facilitate extension by adding only FTL macros -->
-            <xs:any minOccurs="0" maxOccurs="unbounded" processContents="skip"/>
-        </xs:choice>
-    </xs:group>
 
     <!-- ================ Screen - root element ================ -->
     <xs:element name="screen">
@@ -552,10 +544,8 @@ along with this software (see the LICENSE.md file). If not, see
         <xs:annotation>
             <xs:documentation>
                 Declare subscreens for this screen. One subscreen at a time is active, based on the "screen path" used
-                to
-                access this screen. The parent screen (this screen) will be the current element in the screen path and
-                the
-                next screen path element will be the name of the subscreen of this screen to use.
+                to access this screen. The parent screen (this screen) will be the current element in the screen path and
+                the next screen path element will be the name of the subscreen of this screen to use.
 
                 If there is no additional element in the screen path or the next element is not a valid
                 subscreen-item.name
@@ -580,6 +570,26 @@ along with this software (see the LICENSE.md file). If not, see
                 There are two visual elements (widgets) that come from the subscreens, a menu and the active subscreen.
                 Those are included with the widgets using the "subscreens-menu" and "subscreens-active" elements, or the
                 "subscreens-panel" element.
+
+                声明页面的子页面。
+                一次只有一个子页面是活动的，通过定义的“页面路径”访问此页面。父页面（当前页面）将是页面路径中的当前元素，
+                并且下一个页面路径元素将是要使用的此页面的子页面的名称。
+
+                如果页面路径中没有其他元素，或者下一个元素不是有效的subscreen-item.name，default-item将成为活动子页面。
+
+                有四种方法可以将子页面添加到页面（按顺序覆盖）：
+                1.按目录结构的单应用的页面：
+                命名一个与父页面名称相同的目录，将xml文件放入目录中（name = filename，title = screen.default-title，location =
+                父页面最短文件名加上目录和文件名子页面）
+
+                2.如果包含另一个应用的或者共享的且不属于任何应用的页面：应在screen.subscreens下使用subscreens-item元素定义。
+
+                3.对于添加页面或将页面的顺序和标题更改到现有应用程序：Vrsct Conf XML文件中的screen-facade.screen和subscreens-item
+                元素，包括VrsctConf.xml一个组件;这个subscreens-item元素很像subscreens.subscreens-item元素
+
+                4.对于添加页面，删除页面或将页面的顺序和标题更改至现有页面应用：在vrsct.screen.SubscreensItem实体中的一个记录
+                有来自子页面的两个可视化元素（部件），一个菜单和一个激活的子页面。他们通过使用"subscreens-menu"和"subscreens-active"
+                被包含在widgets中，或者"subscreens-panel"元素。
             </xs:documentation>
         </xs:annotation>
         <xs:complexType>

@@ -233,7 +233,6 @@ along with this software (see the LICENSE.md file). If not, see
             <xs:sequence>
                 <xs:element minOccurs="0" ref="entity-find"/>
                 <xs:element minOccurs="0" ref="form-single"/>
-                <xs:element minOccurs="0" ref="form-container-dialog"/>
                 <xs:element minOccurs="0" ref="row-actions"/>
                 <xs:element minOccurs="0" name="hidden-parameters">
                     <xs:complexType>
@@ -264,6 +263,7 @@ along with this software (see the LICENSE.md file). If not, see
                     <xs:element minOccurs="0" ref="auto-fields-service"/>
                     <xs:element minOccurs="0" ref="auto-fields-entity"/>
                     <xs:element minOccurs="0" name="field" type="form-field-list"/>
+                    <xs:element minOccurs="0" ref="form-container-dialog"/>
                 </xs:choice>
                 <xs:element minOccurs="0" maxOccurs="unbounded" ref="form-list-column"/>
             </xs:sequence>
