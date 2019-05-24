@@ -374,6 +374,9 @@ along with this software (see the LICENSE.md file). If not, see
             <xs:annotation><xs:documentation>Just like the parameter subelement can be used to specify parameters to
                 pass with the redirect.</xs:documentation></xs:annotation>
         </xs:attribute>
+        <xs:attribute name="is-frame" default="true" type="boolean">
+            <xs:annotation><xs:documentation>设置返回screen是否为frame页面.</xs:documentation></xs:annotation>
+        </xs:attribute>
         <!-- deferred for future version, pending finding a good reason that it is needed:
         <xs:attribute name="save-last-screen" default="false" type="boolean">
             <xs:annotation><xs:documentation>
