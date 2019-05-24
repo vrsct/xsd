@@ -30,5 +30,5 @@ along with this software (see the LICENSE.md file). If not, see
 
     <system systemId="http://vrsct.org/xsd/xml-actions-2.1.xsd" uri="xml-actions-2.1.xsd"/>
     <system systemId="http://vrsct.org/xsd/xml-form-2.1.xsd" uri="xml-form-2.1.xsd"/>
-    <system systemId="http://vrsct.org/xsd/xml-screen-2.1.xsd" uri="xml-screen-2.1.xsd"/>
+    <system systemId="http://vrsct.org/xsd/xml-screen-2.2.xsd" uri="xml-screen-2.2.xsd"/>
 </catalog>
