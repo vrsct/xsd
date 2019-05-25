@@ -101,7 +101,7 @@ along with this software (see the LICENSE.md file). If not, see
         </xs:annotation>
         <xs:complexType>
             <xs:sequence>
-                <xs:element minOccurs="0" name="field" type="form-field-list"/>
+                <xs:element minOccurs="0" maxOccurs="unbounded" ref="StandaloneFields"/>
             </xs:sequence>
             <xs:attribute name="id" type="xs:string" use="required"/>
         </xs:complexType>
@@ -379,6 +379,12 @@ along with this software (see the LICENSE.md file). If not, see
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="focus-field" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>The name of the field to focus on in the first row when the form is rendered.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="primary-field" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>The name of the field to focus on in the first row when the form is rendered.
                     </xs:documentation>
