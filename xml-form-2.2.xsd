@@ -93,6 +93,20 @@ along with this software (see the LICENSE.md file). If not, see
         </xs:complexType>
     </xs:element>
 
+    <xs:element name="form-list-button" substitutionGroup="AllWidgets">
+        <xs:annotation>
+            <xs:documentation>
+                数据表操作按钮组。
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="0" name="field" type="form-field-list"/>
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
     <xs:element name="form-single" substitutionGroup="AllWidgets">
         <xs:annotation>
             <xs:documentation>A single form is used to view or edit fields of a single map/hash/record/etc.
@@ -1045,6 +1059,13 @@ along with this software (see the LICENSE.md file). If not, see
                             <xs:enumeration value="last"/>
                         </xs:restriction>
                     </xs:simpleType>
+                </xs:attribute>
+                <xs:attribute name="lay-event" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>
+                            lay事件触发关联
+                        </xs:documentation>
+                    </xs:annotation>
                 </xs:attribute>
             </xs:extension>
         </xs:complexContent>
