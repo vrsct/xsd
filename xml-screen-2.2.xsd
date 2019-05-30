@@ -1,17 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-This software is in the public domain under CC0 1.0 Universal plus a
-Grant of Patent License.
-
-To the extent possible under law, the author(s) have dedicated all
-copyright and related and neighboring rights to this software to the
-public domain worldwide. This software is distributed without any
-warranty.
-
-You should have received a copy of the CC0 Public Domain Dedication
-along with this software (see the LICENSE.md file). If not, see
-<http://creativecommons.org/publicdomain/zero/1.0/>.
--->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
     <xs:include schemaLocation="common-types-2.2.xsd"/>
     <xs:include schemaLocation="xml-actions-2.1.xsd"/>
@@ -79,7 +66,7 @@ along with this software (see the LICENSE.md file). If not, see
             <xs:attribute name="parent-frame" type="boolean" default="false">
                 <xs:annotation>
                     <xs:documentation>
-                       是否包含展现框架
+                        是否包含展现框架
                     </xs:documentation>
                 </xs:annotation>
             </xs:attribute>
@@ -551,7 +538,8 @@ along with this software (see the LICENSE.md file). If not, see
         <xs:annotation>
             <xs:documentation>
                 Declare subscreens for this screen. One subscreen at a time is active, based on the "screen path" used
-                to access this screen. The parent screen (this screen) will be the current element in the screen path and
+                to access this screen. The parent screen (this screen) will be the current element in the screen path
+                and
                 the next screen path element will be the name of the subscreen of this screen to use.
 
                 If there is no additional element in the screen path or the next element is not a valid
@@ -860,6 +848,7 @@ along with this software (see the LICENSE.md file). If not, see
                         <xs:enumeration value="footer"/>
                         <xs:enumeration value="code"/>
                         <xs:enumeration value="pre"/>
+                        <xs:enumeration value="colla"/>
                     </xs:restriction>
                 </xs:simpleType>
             </xs:attribute>
@@ -916,6 +905,8 @@ along with this software (see the LICENSE.md file). If not, see
                         <xs:enumeration value="row"/>
                         <xs:enumeration value="card-list"/>
                         <xs:enumeration value="chart"/>
+                        <xs:enumeration value="timeline"/>
+                        <xs:enumeration value="text"/>
                     </xs:restriction>
                 </xs:simpleType>
             </xs:attribute>
@@ -963,6 +954,14 @@ along with this software (see the LICENSE.md file). If not, see
             <xs:sequence>
                 <xs:element ref="row-col" maxOccurs="unbounded"/>
             </xs:sequence>
+            <xs:attribute name="type" default="row">
+                <xs:simpleType>
+                    <xs:restriction base="xs:token">
+                        <xs:enumeration value="row"/>
+                        <xs:enumeration value="timeline"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
             <xs:attribute name="id" type="xs:string"/>
             <xs:attribute name="style" type="xs:string"/>
         </xs:complexType>
@@ -977,6 +976,7 @@ along with this software (see the LICENSE.md file). If not, see
             <xs:attribute name="style" type="xs:string"/>
         </xs:complexType>
     </xs:element>
+
 
     <xs:element name="container-panel" substitutionGroup="AllWidgets">
         <xs:annotation>
