@@ -918,6 +918,28 @@
         </xs:complexType>
     </xs:element>
 
+    <xs:element name="container-tabs" substitutionGroup="AllWidgets">
+        <xs:annotation>
+            <xs:documentation>
+                tab页面容器
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="tab-screen" maxOccurs="unbounded"/>
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:string"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="tab-screen">
+        <xs:complexType>
+            <xs:group ref="widget-elements" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:attribute name="id" type="xs:string"/>
+            <xs:attribute name="title" type="xs:string"/>
+        </xs:complexType>
+    </xs:element>
+
     <xs:element name="notice-panel">
         <xs:complexType>
             <xs:group ref="widget-elements" minOccurs="0" maxOccurs="unbounded"/>
