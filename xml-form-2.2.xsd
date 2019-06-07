@@ -295,6 +295,20 @@ along with this software (see the LICENSE.md file). If not, see
                     </xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute name="header" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>
+                        标题
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="adjust-height" type="xs:nonNegativeInteger">
+                <xs:annotation>
+                    <xs:documentation>
+                        调整高度（减去的高度值）
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="extends" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>The location and name separated by a hash/pound sign (#) of the form to
