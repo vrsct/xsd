@@ -29,6 +29,13 @@ along with this software (see the LICENSE.md file). If not, see
             <xs:attribute name="description" type="xs:string"/>
             <xs:attribute name="version" type="xs:string"/>
             <xs:attribute name="require-authentication" type="authc-options" default="true"/>
+            <xs:attribute name="require-session-token" default="true" type="boolean">
+                <xs:annotation>
+                    <xs:documentation>
+                        添加sessionToken,使用前应严格限定使用条件，比如短信验证。
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
         </xs:complexType>
     </xs:element>
     <xs:element name="id">
