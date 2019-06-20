@@ -516,6 +516,13 @@ along with this software (see the LICENSE.md file). If not, see
                     </xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute name="relative-widget" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>
+                        关联表单，数据表等
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
         </xs:complexType>
     </xs:element>
     <xs:element name="row-actions">
