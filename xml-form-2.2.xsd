@@ -414,6 +414,12 @@ along with this software (see the LICENSE.md file). If not, see
                     </xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute name="condition-field" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>用于设置弹出页面展示.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="skip-start" type="boolean" default="false"/>
             <xs:attribute name="skip-end" type="boolean" default="false"/>
             <xs:attribute name="skip-form" type="boolean" default="false">
@@ -728,6 +734,7 @@ along with this software (see the LICENSE.md file). If not, see
                         <xs:enumeration value="anchor-button"/>
                         <xs:enumeration value="hidden-form"/>
                         <xs:enumeration value="hidden-form-link"/>
+                        <xs:enumeration value="dynamic"/>
                     </xs:restriction>
                 </xs:simpleType>
             </xs:attribute>
