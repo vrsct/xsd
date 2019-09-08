@@ -90,6 +90,7 @@ along with this software (see the LICENSE.md file). If not, see
             <xs:attribute name="condition" type="xs:string"/>
             <xs:attribute name="type" type="color-context" default="primary"/>
             <xs:attribute name="icon" type="xs:string"/>
+            <xs:attribute name="direct-show" type="direct-show" default="N"/>
         </xs:complexType>
     </xs:element>
 
@@ -104,6 +105,17 @@ along with this software (see the LICENSE.md file). If not, see
                 <xs:element minOccurs="0" maxOccurs="unbounded" ref="StandaloneFields"/>
             </xs:sequence>
             <xs:attribute name="id" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="form-group-button" substitutionGroup="AllWidgets">
+        <xs:annotation>
+            <xs:documentation>
+                表单按钮。
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:group ref="widget-elements" minOccurs="0" maxOccurs="unbounded"/>
         </xs:complexType>
     </xs:element>
 

@@ -289,4 +289,10 @@ along with this software (see the LICENSE.md file). If not, see
             </xs:enumeration>
         </xs:restriction>
     </xs:simpleType>
+    <xs:simpleType name="direct-show">
+        <xs:restriction base="xs:token">
+            <xs:enumeration value="Y"/>
+            <xs:enumeration value="N"/>
+        </xs:restriction>
+    </xs:simpleType>
 </xs:schema>

@@ -866,6 +866,7 @@
                         <xs:element ref="box-body-nopad" minOccurs="0"/>
                     </xs:sequence>
                     <xs:element ref="box-body-nopad"/>
+                    <xs:element ref="form-list"/>
                 </xs:choice>
             </xs:sequence>
             <xs:attribute name="id" type="xs:string"/>
