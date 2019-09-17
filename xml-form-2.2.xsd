@@ -836,6 +836,7 @@ along with this software (see the LICENSE.md file). If not, see
             <xs:attribute name="entity-name" type="xs:string"/>
             <xs:attribute name="entity-key-name" type="xs:string"/>
             <xs:attribute name="entity-use-cache" default="true" type="boolean"/>
+            <xs:attribute name="omsubmit" type="xs:string"/>
         </xs:complexType>
     </xs:element>
     <xs:element name="image" substitutionGroup="StandaloneFields">
