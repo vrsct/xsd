@@ -537,14 +537,21 @@ along with this software (see the LICENSE.md file). If not, see
             <xs:attribute name="relative-form" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>
-                        关联表单
+                        关联表单名称
                     </xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="relative-table" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>
-                        关联表
+                        关联数据列表名称
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="relative-list" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>
+                        关联数据实体名称
                     </xs:documentation>
                 </xs:annotation>
             </xs:attribute>
