@@ -420,15 +420,9 @@ along with this software (see the LICENSE.md file). If not, see
                     </xs:documentation>
                 </xs:annotation>
             </xs:attribute>
-            <xs:attribute name="primary-field" type="xs:string">
+            <xs:attribute name="primary-field" type="xs:string" use="required">
                 <xs:annotation>
                     <xs:documentation>主键名称
-                    </xs:documentation>
-                </xs:annotation>
-            </xs:attribute>
-            <xs:attribute name="second-field" type="xs:string">
-                <xs:annotation>
-                    <xs:documentation>联合主键第二个字段名称.
                     </xs:documentation>
                 </xs:annotation>
             </xs:attribute>
