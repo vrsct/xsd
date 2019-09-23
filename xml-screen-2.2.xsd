@@ -930,7 +930,7 @@
                 <xs:element ref="tab-screen" maxOccurs="unbounded"/>
             </xs:sequence>
             <xs:attribute name="id" type="xs:string"/>
-            <xs:attribute name="activeTabIndex" type="xs:integer"/>
+            <xs:attribute name="activeTabIndex" type="xs:string"/>
         </xs:complexType>
     </xs:element>
 
@@ -939,7 +939,7 @@
             <xs:group ref="widget-elements" minOccurs="0" maxOccurs="unbounded"/>
             <xs:attribute name="id" type="xs:string"/>
             <xs:attribute name="title" type="xs:string"/>
-            <xs:attribute name="tabIndex" type="xs:integer"/>
+            <xs:attribute name="tabIndex" type="xs:string"/>
         </xs:complexType>
     </xs:element>
 
