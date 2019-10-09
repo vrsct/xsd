@@ -199,6 +199,13 @@ along with this software (see the LICENSE.md file). If not, see
                     </xs:documentation>
                 </xs:annotation>
             </xs:enumeration>
+            <xs:enumeration value="pub-user">
+                <xs:annotation>
+                    <xs:documentation>
+                        适用于已注册的互联网用户
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
         </xs:restriction>
     </xs:simpleType>
     <xs:simpleType name="color-context">
