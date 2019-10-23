@@ -1207,6 +1207,29 @@
             <xs:attribute type="xs:string" name="list" use="required"/>
         </xs:complexType>
     </xs:element>
+    <xs:element name="layui-tree" substitutionGroup="AllWidgets">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="0" maxOccurs="unbounded" ref="parameter">
+                    <xs:annotation>
+                        <xs:documentation>
+                            The parameters are for remote request of sub-nodes for a node when lazy loading and are in
+                            the
+                            context of the initial rendering of the tree in the screen.
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="name" use="required"/>
+            <xs:attribute type="xs:string" name="transition">
+                <xs:annotation>
+                    <xs:documentation>If not specified uses actions/${tree.@name}</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute type="xs:string" name="open-path" use="optional"/>
+            <!-- <xs:attribute type="xs:string" name="open-depth" default="0"/> -->
+        </xs:complexType>
+    </xs:element>
 
     <!-- ============== Render Mode Elements =============== -->
     <xs:element name="render-mode" substitutionGroup="AllWidgets">
