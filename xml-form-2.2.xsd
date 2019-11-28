@@ -75,6 +75,31 @@ along with this software (see the LICENSE.md file). If not, see
     </xs:element>
 
     <!-- ================== form ==================== -->
+    <xs:element name="form-list-tool" substitutionGroup="AllWidgets">
+        <xs:annotation>
+            <xs:documentation>form-list工具栏，包括按钮，简单查询输入</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:group ref="widget-elements" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:attribute name="id" type="xs:string"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="form-search" substitutionGroup="AllWidgets">
+        <xs:annotation>
+            <xs:documentation>适用于form-list简单的名称查询</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:attribute name="name" type="xs:string" use="required"/>
+            <xs:attribute name="field-name" type="xs:string" use="required"/>
+            <xs:attribute name="display-name" type="xs:string" use="required"/>
+            <xs:attribute name="form-list" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>作为查询框关联的form-list.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
     <xs:element name="form-container-dialog" substitutionGroup="AllWidgets">
         <xs:annotation>
             <xs:documentation>The contents start out hidden with only a button with the button-text on it.
