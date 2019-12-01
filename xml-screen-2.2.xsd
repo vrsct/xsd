@@ -1139,6 +1139,15 @@
         </xs:complexType>
     </xs:element>
 
+    <xs:element name="search-container" substitutionGroup="AllWidgets">
+        <xs:annotation>
+            <xs:documentation>屏幕窗口的搜索栏</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:group ref="widget-elements" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:attribute name="id" type="xs:string"/>
+        </xs:complexType>
+    </xs:element>
 
     <!-- ================ Includes ================ -->
     <!-- possible good idea, but not implementing in 1.0; should use render-mode.text instead
