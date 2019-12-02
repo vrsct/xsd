@@ -426,6 +426,8 @@
                                     <xs:enumeration value="screen-render"/>
                                     <xs:enumeration value="screen-secure"/>
                                     <xs:enumeration value="screen-server-static"/>
+                                    <xs:enumeration value="cors-actual"/>
+                                    <xs:enumeration value="cors-preflight"/>
                                 </xs:restriction>
                             </xs:simpleType>
                         </xs:attribute>
@@ -447,6 +449,8 @@
             <xs:attribute name="https-host" type="xs:string"/>
             <xs:attribute name="http-port" type="xs:string"/>
             <xs:attribute name="http-host" type="xs:string"/>
+            <xs:attribute name="allow-origins" type="xs:string"><xs:annotation><xs:documentation>
+                Comma separated list of host name or protocol plus host name to match against Origin request header; can be '*' to allow all</xs:documentation></xs:annotation></xs:attribute>
             <xs:attribute name="require-session-token" default="true" type="boolean">
                 <xs:annotation>
                     <xs:documentation>
