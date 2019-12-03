@@ -139,46 +139,48 @@ along with this software (see the LICENSE.md file). If not, see
             </xs:attribute>
         </xs:complexType>
     </xs:element>
-    <xs:element name="service-group" substitutionGroup="CallOperations">
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element maxOccurs="unbounded" ref="service-invoke"/>
-            </xs:sequence>
-            <xs:attribute name="send-mode" default="all">
-                <xs:simpleType>
-                    <xs:restriction base="xs:token">
-                        <xs:enumeration value="none"/>
-                        <xs:enumeration value="all"/>
-                        <xs:enumeration value="first-available"/>
-                        <xs:enumeration value="random"/>
-                        <xs:enumeration value="round-robin"/>
-                    </xs:restriction>
-                </xs:simpleType>
-            </xs:attribute>
-        </xs:complexType>
-    </xs:element>
-    <xs:element name="service-invoke">
-        <xs:complexType>
-            <xs:attribute name="name" type="name-full" use="required">
-                <xs:annotation><xs:documentation>
-                    The combined service name, like: "${path}.${verb}${noun}". To explicitly separate the verb and noun
-                    put a hash (#) between them, like: "${path}.${verb}#${noun}".
-                </xs:documentation></xs:annotation>
-            </xs:attribute>
-            <xs:attribute name="async" default="false">
-                <xs:annotation><xs:documentation>If true runs the service asynchronously. Use distribute to run async
-                    on any node in a cluster.</xs:documentation></xs:annotation>
-                <xs:simpleType>
-                    <xs:restriction base="xs:token">
-                        <xs:enumeration value="true"/>
-                        <xs:enumeration value="false"/>
-                        <xs:enumeration value="distribute"/>
-                    </xs:restriction>
-                </xs:simpleType>
-            </xs:attribute>
-            <xs:attribute name="result-to-context" default="false" type="boolean"/>
-        </xs:complexType>
-    </xs:element>
+    <!-- tabled, adds little value, not likely to be implemented:
+     <xs:element name="service-group" substitutionGroup="CallOperations">
+         <xs:complexType>
+             <xs:sequence>
+                 <xs:element maxOccurs="unbounded" ref="service-invoke"/>
+             </xs:sequence>
+             <xs:attribute name="send-mode" default="all">
+                 <xs:simpleType>
+                     <xs:restriction base="xs:token">
+                         <xs:enumeration value="none"/>
+                         <xs:enumeration value="all"/>
+                         <xs:enumeration value="first-available"/>
+                         <xs:enumeration value="random"/>
+                         <xs:enumeration value="round-robin"/>
+                     </xs:restriction>
+                 </xs:simpleType>
+             </xs:attribute>
+         </xs:complexType>
+     </xs:element>
+     <xs:element name="service-invoke">
+         <xs:complexType>
+             <xs:attribute name="name" type="name-full" use="required">
+                 <xs:annotation><xs:documentation>
+                     The combined service name, like: "${path}.${verb}${noun}". To explicitly separate the verb and noun
+                     put a hash (#) between them, like: "${path}.${verb}#${noun}".
+                 </xs:documentation></xs:annotation>
+             </xs:attribute>
+             <xs:attribute name="async" default="false">
+                 <xs:annotation><xs:documentation>If true runs the service asynchronously. Use distribute to run async
+                     on any node in a cluster.</xs:documentation></xs:annotation>
+                 <xs:simpleType>
+                     <xs:restriction base="xs:token">
+                         <xs:enumeration value="true"/>
+                         <xs:enumeration value="false"/>
+                         <xs:enumeration value="distribute"/>
+                     </xs:restriction>
+                 </xs:simpleType>
+             </xs:attribute>
+             <xs:attribute name="result-to-context" default="false" type="boolean"/>
+         </xs:complexType>
+     </xs:element>
+     -->
 
     <xs:element name="script" substitutionGroup="CallOperations">
         <xs:annotation><xs:documentation>
