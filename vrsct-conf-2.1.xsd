@@ -449,10 +449,10 @@
             <xs:attribute name="https-host" type="xs:string"/>
             <xs:attribute name="http-port" type="xs:string"/>
             <xs:attribute name="http-host" type="xs:string"/>
-            <xs:attribute name="handle-cors" type="boolean" default="true">
+            <xs:attribute name="handle-cors" type="boolean-expandable" default="true">
                 <xs:annotation>
                     <xs:documentation>
-                        Set to false to disable CORS handling globally in MoquiServlet including Origin validation and
+                        Set to false to disable CORS handling globally in VrsctServlet including Origin validation and
                         adding cors-preflight and cors-actual configured response headers
                     </xs:documentation>
                 </xs:annotation>
@@ -465,7 +465,7 @@
                     </xs:documentation>
                 </xs:annotation>
             </xs:attribute>
-            <xs:attribute name="require-session-token" default="true" type="boolean">
+            <xs:attribute name="require-session-token" type="boolean-expandable" default="true">
                 <xs:annotation>
                     <xs:documentation>
                         If not false (default true) vrsctSessionToken (from ec.web.sessionToken) must be passed to all
@@ -899,9 +899,9 @@
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="schema-name" type="xs:string"/>
-            <xs:attribute name="startup-add-missing" default="false" type="boolean"/>
-            <xs:attribute name="runtime-add-missing" default="true" type="boolean"/>
-            <xs:attribute name="runtime-add-fks" default="true" type="boolean"/>
+            <xs:attribute name="startup-add-missing" default="false" type="boolean-expandable"/>
+            <xs:attribute name="runtime-add-missing" default="true" type="boolean-expandable"/>
+            <xs:attribute name="runtime-add-fks" default="true" type="boolean-expandable"/>
             <xs:attribute name="object-factory" type="xs:string"
                           default="com.vrsct.impl.entity.EntityDatasourceFactoryImpl">
                 <xs:annotation>
@@ -910,7 +910,7 @@
                     </xs:documentation>
                 </xs:annotation>
             </xs:attribute>
-            <xs:attribute name="sequence-primary-use-uuid" type="boolean" default="false">
+            <xs:attribute name="sequence-primary-use-uuid" type="boolean-expandable" default="false">
                 <xs:annotation>
                     <xs:documentation>Uses java.util.UUID.randomUUID() to get sequenced IDs for all entities in this
                         datasource.
