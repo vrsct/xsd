@@ -53,6 +53,10 @@ along with this software (see the LICENSE.md file). If not, see
         </xs:restriction>
     </xs:simpleType>
 
+    <!-- Plain name, simple letters and digits plus has for name segmentation -->
+    <xs:simpleType name="name-segmented"><xs:restriction base="xs:string">
+        <xs:pattern value="[a-zA-Z][#_a-zA-Z0-9]*"/></xs:restriction></xs:simpleType>
+
     <xs:simpleType name="boolean">
         <xs:restriction base="xs:token">
             <xs:enumeration value="true"/>

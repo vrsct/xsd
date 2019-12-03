@@ -892,7 +892,7 @@
                     <xs:element minOccurs="0" maxOccurs="1" ref="inline-other"/>
                 </xs:choice>
             </xs:sequence>
-            <xs:attribute name="group-name" type="name-plain" use="required"/>
+            <xs:attribute name="group-name" type="name-segmented" use="required"/>
             <xs:attribute name="database-conf-name" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>This is only required for JDBC/SQL datasources.</xs:documentation>
