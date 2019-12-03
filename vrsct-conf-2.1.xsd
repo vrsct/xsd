@@ -792,13 +792,9 @@
                     </xs:documentation>
                 </xs:annotation>
             </xs:attribute>
-            <xs:attribute name="scheduled-job-check-time" type="xs:nonNegativeInteger">
-                <xs:annotation>
-                    <xs:documentation>
-                        How often to check for and run scheduled service jobs in seconds. Set to 0 (zero) to disable.
-                    </xs:documentation>
-                </xs:annotation>
-            </xs:attribute>
+            <xs:attribute name="scheduled-job-check-time" type="non-neg-int-expandable"><xs:annotation><xs:documentation>
+                How often to check for and run scheduled service jobs in seconds. Set to 0 (zero) to disable.
+            </xs:documentation></xs:annotation></xs:attribute>
         </xs:complexType>
     </xs:element>
     <xs:element name="service-location">
