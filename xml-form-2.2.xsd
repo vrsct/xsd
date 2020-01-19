@@ -326,6 +326,12 @@ along with this software (see the LICENSE.md file). If not, see
                     </xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute name="itemMap" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>事项明细map
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="focus-field" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>The name of the field to focus on when the form is rendered.</xs:documentation>
