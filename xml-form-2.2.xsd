@@ -664,6 +664,13 @@ along with this software (see the LICENSE.md file). If not, see
                     </xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute name="show-page-size" type="boolean" default="false">
+                <xs:annotation>
+                    <xs:documentation>Show a drop-down to select different page sizes, if the pagination header is
+                        displayed
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="dynamic" type="boolean" default="false">
                 <xs:annotation>
                     <xs:documentation>If true then this form will be considered dynamic and the internal
