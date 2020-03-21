@@ -713,6 +713,7 @@
             <xs:attribute name="title" type="xs:string"/>
             <xs:attribute name="width" type="xs:string"/>
             <xs:attribute name="header-menus-id" type="xs:string" default="header-menus"/>
+            <xs:attribute name="sidebar-menus-id" type="xs:string" default="sidebar-menus"/>
         </xs:complexType>
     </xs:element>
     <xs:element name="subscreens-active" substitutionGroup="AllWidgets">
