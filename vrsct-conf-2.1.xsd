@@ -743,6 +743,7 @@
                             <xs:attribute name="name" type="name-plain" use="required"/>
                             <xs:attribute name="location" type="xs:string"/>
                             <xs:attribute name="menu-title" type="xs:string"/>
+                            <xs:attribute name="menu-image" type="xs:string"/>
                             <xs:attribute name="menu-index" type="xs:positiveInteger"/>
                             <xs:attribute name="menu-include" type="boolean" default="true"/>
                             <xs:attribute name="no-sub-path" type="boolean" default="false"/>
