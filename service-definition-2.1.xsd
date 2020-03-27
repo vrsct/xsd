@@ -307,6 +307,9 @@ along with this software (see the LICENSE.md file). If not, see
                         <xs:annotation><xs:documentation>Behave the same as if the parameter did not exist, useful when
                             overriding a previously defined parameter.</xs:documentation></xs:annotation>
                     </xs:enumeration>
+                    <xs:enumeration value="entity">
+                        <xs:annotation><xs:documentation>字段是否非空与实体保持一致,不单独定义,一般用于新建数据.</xs:documentation></xs:annotation>
+                    </xs:enumeration>
                 </xs:restriction>
             </xs:simpleType>
         </xs:attribute>
