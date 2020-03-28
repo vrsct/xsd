@@ -861,6 +861,8 @@
                         <xs:enumeration value="code"/>
                         <xs:enumeration value="pre"/>
                         <xs:enumeration value="colla"/>
+                        <xs:enumeration value="message"/>
+                        <xs:enumeration value="a"/>
                     </xs:restriction>
                 </xs:simpleType>
             </xs:attribute>
@@ -923,6 +925,7 @@
                     </xs:restriction>
                 </xs:simpleType>
             </xs:attribute>
+            <xs:attribute name="style" type="xs:string"/>
         </xs:complexType>
     </xs:element>
     <xs:element name="box-body-nopad">
