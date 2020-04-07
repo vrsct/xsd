@@ -75,6 +75,15 @@ along with this software (see the LICENSE.md file). If not, see
     </xs:element>
 
     <!-- ================== form ==================== -->
+    <xs:element name="form-tool" substitutionGroup="AllWidgets">
+        <xs:annotation>
+            <xs:documentation>form-single工具栏，包括按钮，简单查询输入</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:group ref="widget-elements" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:attribute name="id" type="xs:string"/>
+        </xs:complexType>
+    </xs:element>
     <xs:element name="form-list-tool" substitutionGroup="AllWidgets">
         <xs:annotation>
             <xs:documentation>form-list工具栏，包括按钮，简单查询输入</xs:documentation>
@@ -937,6 +946,8 @@ along with this software (see the LICENSE.md file). If not, see
                         <xs:enumeration value="hidden-form"/>
                         <xs:enumeration value="hidden-form-link"/>
                         <xs:enumeration value="dynamic"/>
+                        <xs:enumeration value="layer-form"/>
+                        <xs:enumeration value="list-button"/>
                     </xs:restriction>
                 </xs:simpleType>
             </xs:attribute>
@@ -1027,6 +1038,8 @@ along with this software (see the LICENSE.md file). If not, see
             <xs:attribute name="entity-key-name" type="xs:string"/>
             <xs:attribute name="entity-use-cache" default="true" type="boolean"/>
             <xs:attribute name="omsubmit" type="xs:string"/>
+            <xs:attribute name="width" type="xs:string"/>
+            <xs:attribute name="height" type="xs:string"/>
         </xs:complexType>
     </xs:element>
     <xs:element name="image" substitutionGroup="StandaloneFields">
