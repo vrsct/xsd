@@ -476,6 +476,13 @@ along with this software (see the LICENSE.md file). If not, see
                     </xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute name="height" type="xs:nonNegativeInteger">
+                <xs:annotation>
+                    <xs:documentation>
+                        表格高度
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="adjust-height" type="xs:nonNegativeInteger">
                 <xs:annotation>
                     <xs:documentation>

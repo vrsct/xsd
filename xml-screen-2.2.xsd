@@ -957,6 +957,13 @@
             <xs:attribute name="title" type="xs:string"/>
             <xs:attribute name="tabIndex" type="xs:string"/>
             <xs:attribute name="type" type="xs:string"/>
+            <xs:attribute name="condition" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>A condition expression, just like the section.condition.expression
+                        element but more concise.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
         </xs:complexType>
     </xs:element>
 
