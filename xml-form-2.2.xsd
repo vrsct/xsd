@@ -370,7 +370,12 @@ along with this software (see the LICENSE.md file). If not, see
                     </xs:documentation>
                 </xs:annotation>
             </xs:attribute>
-
+            <xs:attribute name="isView" type="boolean" default="false" use="required">
+                <xs:annotation>
+                    <xs:documentation>是否只是浏览账户权限查看,如果是浏览账户,只展示结论表及图片,不展示勘验记录明细.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="background-submit" type="boolean" default="false">
                 <xs:annotation>
                     <xs:documentation>Submit the form in the background without reloading the screen.</xs:documentation>
