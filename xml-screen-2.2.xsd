@@ -109,15 +109,20 @@
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="transaction-timeout" type="xs:int">
-                <xs:annotation><xs:documentation>
-                    The timeout for the screen render transaction, in seconds. Defaults to global transaction timeout default (usually 60s).
+                <xs:annotation>
+                    <xs:documentation>
+                        The timeout for the screen render transaction, in seconds. Defaults to global transaction
+                        timeout default (usually 60s).
 
-                    This value is only used if a screen in the rendered screen path begins a transaction. If multiple screens in the
-                    render path have a timeout the highest will be used.
+                        This value is only used if a screen in the rendered screen path begins a transaction. If
+                        multiple screens in the
+                        render path have a timeout the highest will be used.
 
-                    This is not intended for interactive screen rendering as the HTTP request or gateway will generally timeout first
-                    anyway but is useful for background rendered screens for large reports and such.
-                </xs:documentation></xs:annotation>
+                        This is not intended for interactive screen rendering as the HTTP request or gateway will
+                        generally timeout first
+                        anyway but is useful for background rendered screens for large reports and such.
+                    </xs:documentation>
+                </xs:annotation>
             </xs:attribute>
             <xs:attribute name="include-child-content" type="boolean" default="false">
                 <xs:annotation>
@@ -799,14 +804,11 @@
                     </xs:documentation>
                 </xs:annotation>
             </xs:attribute>
-            <!-- TODO handle paginate* in ScreenSection.groovy
-            <xs:attribute name="paginate" type="xs:string" default="false">
-                <xs:annotation><xs:documentation>
-                    Indicate if this section is paginated or not, false by default.
-                </xs:documentation></xs:annotation>
+            <xs:attribute name="paginate" type="boolean" default="false">
+                <xs:annotation>
+                    <xs:documentation>Indicate if this section is paginated or not, false by default.</xs:documentation>
+                </xs:annotation>
             </xs:attribute>
-            <xs:attribute name="paginate-size" type="xs:string"/>
-            -->
         </xs:complexType>
     </xs:element>
 
@@ -949,9 +951,9 @@
         </xs:annotation>
         <xs:complexType>
             <xs:group ref="widget-elements" minOccurs="0" maxOccurs="unbounded"/>
-<!--            <xs:sequence>-->
-<!--                <xs:element ref="tab-screen" maxOccurs="unbounded"/>-->
-<!--            </xs:sequence>-->
+            <!--            <xs:sequence>-->
+            <!--                <xs:element ref="tab-screen" maxOccurs="unbounded"/>-->
+            <!--            </xs:sequence>-->
             <xs:attribute name="id" type="xs:string"/>
             <xs:attribute name="activeTabIndex" type="xs:string"/>
         </xs:complexType>
