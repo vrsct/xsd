@@ -865,6 +865,7 @@
                         <xs:enumeration value="colla"/>
                         <xs:enumeration value="message"/>
                         <xs:enumeration value="a"/>
+                        <xs:enumeration value="hr"/>
                     </xs:restriction>
                 </xs:simpleType>
             </xs:attribute>
