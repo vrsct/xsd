@@ -897,6 +897,13 @@
                     </xs:restriction>
                 </xs:simpleType>
             </xs:attribute>
+            <xs:attribute name="condition" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>A condition expression, just like the section.condition.expression
+                        element but more concise.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
         </xs:complexType>
     </xs:element>
     <xs:element name="box-header">
@@ -1004,6 +1011,13 @@
             <xs:attribute name="num" type="xs:integer"/>
             <xs:attribute name="url" type="xs:string"/>
             <xs:attribute name="urlText" type="xs:string"/>
+            <xs:attribute name="condition" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>A condition expression, just like the section.condition.expression
+                        element but more concise.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
         </xs:complexType>
     </xs:element>
 
@@ -1046,6 +1060,7 @@
             <xs:attribute name="sm" type="xs:nonNegativeInteger"/>
             <xs:attribute name="xs" type="xs:nonNegativeInteger"/>
             <xs:attribute name="style" type="xs:string"/>
+            <xs:attribute name="condition" type="xs:string"/>
         </xs:complexType>
     </xs:element>
 
