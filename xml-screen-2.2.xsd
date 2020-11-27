@@ -1317,7 +1317,7 @@
     </xs:element>
 
     <!-- ============== Text Specific Elements =============== -->
-    <xs:element name="text">
+    <xs:element name="text" substitutionGroup="AllWidgets">
         <xs:complexType>
             <xs:simpleContent>
                 <xs:extension base="xs:string">
