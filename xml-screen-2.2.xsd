@@ -1037,9 +1037,7 @@
             </xs:documentation>
         </xs:annotation>
         <xs:complexType>
-            <xs:sequence>
-                <xs:element ref="row-col" maxOccurs="unbounded"/>
-            </xs:sequence>
+            <xs:group ref="widget-elements" minOccurs="0" maxOccurs="unbounded"/>
             <xs:attribute name="type" default="row">
                 <xs:simpleType>
                     <xs:restriction base="xs:token">
@@ -1053,6 +1051,17 @@
         </xs:complexType>
     </xs:element>
     <xs:element name="row-col">
+        <xs:complexType>
+            <xs:group ref="widget-elements" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:attribute name="lg" type="xs:nonNegativeInteger"/>
+            <xs:attribute name="md" type="xs:nonNegativeInteger"/>
+            <xs:attribute name="sm" type="xs:nonNegativeInteger"/>
+            <xs:attribute name="xs" type="xs:nonNegativeInteger"/>
+            <xs:attribute name="style" type="xs:string"/>
+            <xs:attribute name="condition" type="xs:string"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="row-col-time">
         <xs:complexType>
             <xs:group ref="widget-elements" minOccurs="0" maxOccurs="unbounded"/>
             <xs:attribute name="lg" type="xs:nonNegativeInteger"/>
