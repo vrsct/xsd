@@ -763,6 +763,28 @@
                     </xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute name="refresh-list" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>作为刷新form的父表定义.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="refresh-section" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>作为刷新form的section定义.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="primary-field" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>主键名称
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="transition" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>事务
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
         </xs:complexType>
     </xs:element>
     <xs:element name="section-iterate" substitutionGroup="AllWidgets">

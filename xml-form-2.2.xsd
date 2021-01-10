@@ -293,6 +293,17 @@ along with this software (see the LICENSE.md file). If not, see
                     <xs:documentation>作为查询框关联的form-list.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute name="refresh-list" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>作为刷新form的父表定义.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="primary-field" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>主键名称
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="style" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>作为查询框关联的form-list.</xs:documentation>
@@ -1630,6 +1641,12 @@ along with this software (see the LICENSE.md file). If not, see
             <xs:annotation>
                 <xs:documentation>The name of this field that will be shown to the user; can use the ${}
                     and map.key (dot) syntax to insert values from the context.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="read-only" type="xs:string">
+            <xs:annotation>
+                <xs:documentation>是否只读 Y or N
                 </xs:documentation>
             </xs:annotation>
         </xs:attribute>
