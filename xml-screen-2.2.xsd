@@ -899,6 +899,7 @@
             <xs:sequence>
                 <xs:element ref="box-header"/>
                 <xs:element ref="box-toolbar" minOccurs="0"/>
+                <xs:element ref="form-list-tool" minOccurs="0"/>
                 <xs:choice>
                     <xs:sequence>
                         <xs:element ref="box-body"/>
