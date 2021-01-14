@@ -957,6 +957,7 @@
                         <xs:enumeration value="common"/>
                         <xs:enumeration value="link"/>
                         <xs:enumeration value="form"/>
+                        <xs:enumeration value="form-list"/>
                         <xs:enumeration value="row"/>
                         <xs:enumeration value="card-list"/>
                         <xs:enumeration value="chart"/>
