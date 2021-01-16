@@ -310,9 +310,45 @@ along with this software (see the LICENSE.md file). If not, see
                     <xs:documentation>作为查询框关联的form-list.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute name="third-party" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>第三方名称,用于个性化接口开发</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
         </xs:complexType>
     </xs:element>
 
+    <xs:element name="form-camera" substitutionGroup="AllWidgets">
+        <xs:annotation>
+            <xs:documentation>动态表单生成.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:group ref="widget-elements" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:attribute name="name" type="name-upper" use="required">
+                <xs:annotation>
+                    <xs:documentation>
+                        表单名称
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="transition" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>表单事务.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="relate-form" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>关联表单,拍摄图片将置于关联表单.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="third-party" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>摄像头厂商代码.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
     <xs:element name="form-dynamic" substitutionGroup="AllWidgets">
         <xs:annotation>
             <xs:documentation>动态表单生成.
