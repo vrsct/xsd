@@ -294,11 +294,6 @@ along with this software (see the LICENSE.md file). If not, see
                     <xs:documentation>作为查询框关联的form-list.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
-            <xs:attribute name="refresh-list" type="xs:string">
-                <xs:annotation>
-                    <xs:documentation>作为刷新form的父表定义.</xs:documentation>
-                </xs:annotation>
-            </xs:attribute>
             <xs:attribute name="primary-field" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>主键名称
@@ -975,6 +970,72 @@ along with this software (see the LICENSE.md file). If not, see
                         field
                         names. This is ignored if the field.@from attribute is used, that is evaluated against the
                         context in place at the time each field is rendered. Defaults to "fieldValues".
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="form-relative" substitutionGroup="AllWidgets">
+        <xs:annotation>
+            <xs:documentation>
+                描述页面表,表单等关联关系,放在widgets最后
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:group ref="widget-elements" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="relative-node" substitutionGroup="AllWidgets">
+        <xs:annotation>
+            <xs:documentation>
+                描述关系节点
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:attribute name="node-name" type="xs:string" use="required">
+                <xs:annotation>
+                    <xs:documentation>
+                        页面节点名称
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="node-type" use="required">
+                <xs:simpleType>
+                    <xs:restriction base="xs:token">
+                        <xs:enumeration value="table"/>
+                        <xs:enumeration value="form"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="node-position"  use="required">
+                <xs:simpleType>
+                    <xs:restriction base="xs:token">
+                        <xs:enumeration value="start"/>
+                        <xs:enumeration value="middle"/>
+                        <xs:enumeration value="end"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="parent-name" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>
+                        父节点名称
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="entity-name" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>
+                        实体名称
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="data-list" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>
+                        纯结果数据列表名称(非form)
                     </xs:documentation>
                 </xs:annotation>
             </xs:attribute>
