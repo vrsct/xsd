@@ -799,9 +799,9 @@ along with this software (see the LICENSE.md file). If not, see
                     </xs:documentation>
                 </xs:annotation>
             </xs:attribute>
-            <xs:attribute name="primary-field" type="xs:string">
+            <xs:attribute name="relative-field" type="xs:string">
                 <xs:annotation>
-                    <xs:documentation>主键名称
+                    <xs:documentation>关联父表展示用的字段
                     </xs:documentation>
                 </xs:annotation>
             </xs:attribute>
@@ -1029,6 +1029,13 @@ along with this software (see the LICENSE.md file). If not, see
                 <xs:annotation>
                     <xs:documentation>
                         实体名称
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="primary-field" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>
+                        处理需要定制主键的情况
                     </xs:documentation>
                 </xs:annotation>
             </xs:attribute>
