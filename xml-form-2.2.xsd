@@ -593,7 +593,6 @@ along with this software (see the LICENSE.md file). If not, see
             <xs:documentation>.</xs:documentation>
         </xs:annotation>
         <xs:complexType>
-            <xs:group ref="widget-elements" minOccurs="0" maxOccurs="unbounded"/>
             <xs:sequence>
                 <xs:choice minOccurs="0" maxOccurs="unbounded">
                     <xs:element minOccurs="0" ref="auto-fields-service"/>
@@ -799,9 +798,9 @@ along with this software (see the LICENSE.md file). If not, see
                     </xs:documentation>
                 </xs:annotation>
             </xs:attribute>
-            <xs:attribute name="primary-field" type="xs:string">
+            <xs:attribute name="relative-field" type="xs:string">
                 <xs:annotation>
-                    <xs:documentation>主键名称
+                    <xs:documentation>关联父表展示用的字段
                     </xs:documentation>
                 </xs:annotation>
             </xs:attribute>
@@ -959,9 +958,6 @@ along with this software (see the LICENSE.md file). If not, see
         </xs:annotation>
         <xs:complexType>
             <xs:group ref="widget-elements" minOccurs="0" maxOccurs="unbounded"/>
-            <!--            <xs:sequence>-->
-            <!--                <xs:element ref="tab-screen" maxOccurs="unbounded"/>-->
-            <!--            </xs:sequence>-->
             <xs:attribute name="name" type="xs:string"/>
             <xs:attribute name="map" type="xs:string" default="fieldValues">
                 <xs:annotation>
@@ -1029,6 +1025,13 @@ along with this software (see the LICENSE.md file). If not, see
                 <xs:annotation>
                     <xs:documentation>
                         实体名称
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="primary-field" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>
+                        处理需要定制主键的情况
                     </xs:documentation>
                 </xs:annotation>
             </xs:attribute>
