@@ -1273,6 +1273,7 @@ along with this software (see the LICENSE.md file). If not, see
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="text" type="xs:string"/>
+            <xs:attribute name="title" type="xs:string"/>
             <xs:attribute name="text-map" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>An expression that evaluates to a Map in the context that will be used
@@ -2121,6 +2122,13 @@ along with this software (see the LICENSE.md file). If not, see
         </xs:complexType>
     </xs:element>
     <xs:element name="file" substitutionGroup="SubFields">
+        <xs:complexType>
+            <xs:attribute name="size" type="xs:positiveInteger" default="30"/>
+            <xs:attribute name="maxlength" type="xs:positiveInteger"/>
+            <xs:attribute name="default-value" type="xs:string"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="multi-file" substitutionGroup="SubFields">
         <xs:complexType>
             <xs:attribute name="size" type="xs:positiveInteger" default="30"/>
             <xs:attribute name="maxlength" type="xs:positiveInteger"/>
