@@ -958,14 +958,11 @@ along with this software (see the LICENSE.md file). If not, see
         </xs:annotation>
         <xs:complexType>
             <xs:group ref="widget-elements" minOccurs="0" maxOccurs="unbounded"/>
-            <xs:attribute name="name" type="xs:string"/>
-            <xs:attribute name="map" type="xs:string" default="fieldValues">
+            <xs:attribute name="name" type="xs:string" use="required"/>
+            <xs:attribute name="list" type="xs:string" use="required">
                 <xs:annotation>
-                    <xs:documentation>The Map to get field values from. Is often a EntityValue object or a
-                        Map with data pulled from various places to populate in the form. Map keys are matched against
-                        field
-                        names. This is ignored if the field.@from attribute is used, that is evaluated against the
-                        context in place at the time each field is rendered. Defaults to "fieldValues".
+                    <xs:documentation>
+                        数据表
                     </xs:documentation>
                 </xs:annotation>
             </xs:attribute>
