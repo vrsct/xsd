@@ -1020,6 +1020,7 @@ along with this software (see the LICENSE.md file). If not, see
                         <xs:enumeration value="start"/>
                         <xs:enumeration value="middle"/>
                         <xs:enumeration value="end"/>
+                        <xs:enumeration value="stand-alone"/>
                     </xs:restriction>
                 </xs:simpleType>
             </xs:attribute>
