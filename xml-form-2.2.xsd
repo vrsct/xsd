@@ -1004,6 +1004,7 @@ along with this software (see the LICENSE.md file). If not, see
             </xs:documentation>
         </xs:annotation>
         <xs:complexType>
+            <xs:group ref="widget-elements" minOccurs="0" maxOccurs="unbounded"/>
             <xs:attribute name="node-name" type="xs:string" use="required">
                 <xs:annotation>
                     <xs:documentation>
@@ -1065,6 +1066,31 @@ along with this software (see the LICENSE.md file). If not, see
         </xs:complexType>
     </xs:element>
 
+    <xs:element name="relative-hide-field">
+        <xs:complexType>
+            <xs:attribute name="div-id" type="xs:string" use="required">
+                <xs:annotation>
+                    <xs:documentation>
+                        是否显示的内容区域
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="effect-field" type="xs:string" use="required">
+                <xs:annotation>
+                    <xs:documentation>
+                        影响该字段的字段
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="effect-field-value" type="xs:string" use="required">
+                <xs:annotation>
+                    <xs:documentation>
+                        effect-field为该值时隐藏字段
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
     <xs:element name="row-actions">
         <xs:complexType>
             <xs:sequence>
@@ -1239,6 +1265,13 @@ along with this software (see the LICENSE.md file). If not, see
     <xs:element name="field-ref">
         <xs:complexType>
             <xs:attribute name="name" type="name-parameter" use="required"/>
+            <xs:attribute name="id" type="xs:string"/>
+            <xs:attribute name="hide" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>动态判断是否显示
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
         </xs:complexType>
     </xs:element>
     <xs:element name="fields-not-referenced">
