@@ -2181,6 +2181,16 @@ along with this software (see the LICENSE.md file). If not, see
             <xs:attribute name="default-value" type="xs:string"/>
         </xs:complexType>
     </xs:element>
+    <xs:element name="layui-file" substitutionGroup="SubFields">
+        <xs:complexType>
+            <xs:attribute name="size" type="xs:positiveInteger" default="30"/>
+            <xs:attribute name="maxlength" type="xs:positiveInteger"/>
+            <xs:attribute name="default-value" type="xs:string"/>
+            <xs:attribute name="accept" type="xs:string"/>
+            <xs:attribute name="exts" type="xs:string"/>
+            <xs:attribute name="title" type="xs:string"/>
+        </xs:complexType>
+    </xs:element>
     <xs:element name="multi-file" substitutionGroup="SubFields">
         <xs:complexType>
             <xs:attribute name="size" type="xs:positiveInteger" default="30"/>
