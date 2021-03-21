@@ -1178,6 +1178,39 @@
             <xs:group ref="widget-elements" minOccurs="0" maxOccurs="unbounded"/>
             <xs:attribute name="id" type="xs:string" use="required"/>
             <xs:attribute name="button-text" type="xs:string" use="required"/>
+            <xs:attribute name="text-map" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>An expression that evaluates to a Map in the context that will be used
+                        in addition to the context when expanding the @text value.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="button-style" type="xs:string"/>
+            <xs:attribute name="title" type="xs:string"/>
+            <xs:attribute name="width" type="xs:string" default="760"/>
+            <xs:attribute name="height" type="xs:string" default="600"/>
+            <xs:attribute name="condition" type="xs:string"/>
+            <xs:attribute name="type" type="color-context" default="primary"/>
+            <xs:attribute name="icon" type="xs:string"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="group-container-dialog" substitutionGroup="AllWidgets">
+        <xs:annotation>
+            <xs:documentation>The contents start out hidden with only a button with the button-text on it.
+                When the button is clicked on a dialog opens to show the contents.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:group ref="widget-elements" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:attribute name="id" type="xs:string" use="required"/>
+            <xs:attribute name="button-text" type="xs:string" use="required"/>
+            <xs:attribute name="text-map" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>An expression that evaluates to a Map in the context that will be used
+                        in addition to the context when expanding the @text value.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="button-style" type="xs:string"/>
             <xs:attribute name="title" type="xs:string"/>
             <xs:attribute name="width" type="xs:string" default="760"/>
@@ -1405,6 +1438,28 @@
                     </xs:attribute>
                 </xs:extension>
             </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="group-form" substitutionGroup="AllWidgets">
+        <xs:annotation>
+            <xs:documentation>
+                窗体组
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:group ref="widget-elements" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:attribute type="xs:string" name="id" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="group-button" substitutionGroup="AllWidgets">
+        <xs:annotation>
+            <xs:documentation>
+                普通按钮组。
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:group ref="widget-elements" minOccurs="0" maxOccurs="unbounded"/>
         </xs:complexType>
     </xs:element>
 </xs:schema>
