@@ -289,6 +289,16 @@ along with this software (see the LICENSE.md file). If not, see
                     <xs:documentation>是否只读.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute name="save-close" type="xs:string" default="Y">
+                <xs:annotation>
+                    <xs:documentation>保存后关闭.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="save-close-parent" type="xs:string" default="Y">
+                <xs:annotation>
+                    <xs:documentation>保存后关闭父页面.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="ui-read-only" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>是否只读.</xs:documentation>
