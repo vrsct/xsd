@@ -362,6 +362,50 @@ along with this software (see the LICENSE.md file). If not, see
             </xs:attribute>
         </xs:complexType>
     </xs:element>
+    <xs:element name="date-scope">
+        <xs:annotation>
+            <xs:documentation>Adds a constraint to find to filter by the from and thru dates in each record,
+                comparing them to the valid-date value.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:attribute type="xs:string" name="field-name">
+                <xs:annotation>
+                    <xs:documentation>
+                        时间字段名称
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute type="xs:string" name="from-field-name">
+                <xs:annotation>
+                    <xs:documentation>The name of the entity field to use as the from/beginning effective
+                        date. Defaults to fromDate.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute type="xs:string" name="thru-field-name">
+                <xs:annotation>
+                    <xs:documentation>The name of the entity field to use as the thru/ending effective date.
+                        Defaults to thruDate.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="ignore-if-empty" type="boolean" default="false">
+                <xs:annotation>
+                    <xs:documentation>Leave out the constraint if date is empty or null. Defaults to false.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="ignore" type="xs:string" default="false">
+                <xs:annotation>
+                    <xs:documentation>Ignore the econdition (leave out of the find) if set to true or expression
+                        evaluates to true.
+                        Defaults to false.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
 
     <!-- Entity Misc Operations -->
     <xs:element name="entity-data" substitutionGroup="EntityMiscOperations">
@@ -616,6 +660,7 @@ along with this software (see the LICENSE.md file). If not, see
         <xs:complexType>
             <xs:choice maxOccurs="unbounded">
                 <xs:element ref="date-filter"/>
+                <xs:element ref="date-scope"/>
                 <xs:element ref="econdition"/>
                 <xs:element ref="econditions"/>
                 <xs:element ref="econdition-object"/>
