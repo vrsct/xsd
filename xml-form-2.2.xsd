@@ -1327,6 +1327,14 @@ along with this software (see the LICENSE.md file). If not, see
                     </xs:restriction>
                 </xs:simpleType>
             </xs:attribute>
+            <xs:attribute name="action-type">
+                <xs:simpleType>
+                    <xs:restriction base="xs:token">
+                        <xs:enumeration value="update"/>
+                        <xs:enumeration value="delete"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
             <xs:attribute name="url" type="xs:string" use="required"/>
             <xs:attribute name="url-type" type="url-type" default="transition">
                 <xs:annotation>
