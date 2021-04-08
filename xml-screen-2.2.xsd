@@ -1049,6 +1049,7 @@
         <xs:complexType>
             <xs:group ref="widget-elements" minOccurs="0" maxOccurs="unbounded"/>
             <xs:attribute name="id" type="xs:string"/>
+            <xs:attribute name="map" type="xs:string"/>
             <xs:attribute name="div1-style" type="xs:string"/>
             <xs:attribute name="div2-style" type="xs:string"/>
         </xs:complexType>
