@@ -147,6 +147,7 @@ along with this software (see the LICENSE.md file). If not, see
                 <xs:element minOccurs="0" maxOccurs="unbounded" ref="StandaloneFields"/>
             </xs:sequence>
             <xs:attribute name="id" type="xs:string" use="required"/>
+            <xs:attribute name="width" type="xs:int"/>
         </xs:complexType>
     </xs:element>
 
