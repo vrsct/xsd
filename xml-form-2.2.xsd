@@ -1332,6 +1332,8 @@ along with this software (see the LICENSE.md file). If not, see
                 <xs:simpleType>
                     <xs:restriction base="xs:token">
                         <xs:enumeration value="update"/>
+                        <xs:enumeration value="copy"/>
+                        <xs:enumeration value="release"/>
                         <xs:enumeration value="delete"/>
                     </xs:restriction>
                 </xs:simpleType>
