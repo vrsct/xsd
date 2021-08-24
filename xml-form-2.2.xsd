@@ -1335,7 +1335,7 @@ along with this software (see the LICENSE.md file). If not, see
                         <xs:enumeration value="copy"/>
                         <xs:enumeration value="release"/>
                         <xs:enumeration value="delete"/>
-                        <xs:enumeration value="workflow"/>
+                        <xs:enumeration value="view"/>
                     </xs:restriction>
                 </xs:simpleType>
             </xs:attribute>
